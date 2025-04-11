@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-
 // Configuración de conexión a MongoDB
-
 const connectDB = async () => {
     try {
         await mongoose.connect(process.env.MONGODB_URI);
@@ -12,5 +10,4 @@ const connectDB = async () => {
         process.exit(1);
     }
 };
-
 module.exports = connectDB;
